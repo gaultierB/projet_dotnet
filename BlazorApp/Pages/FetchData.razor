@@ -1,13 +1,14 @@
 ﻿@page "/fetchdata"
 
 @using BlazorApp.Data
-@inject WeatherForecastService ForecastService
+@inject HttpClient Http
 
-<h1>Weather forecast</h1>
+
+<h1>Players</h1>
 
 <p>This component demonstrates fetching data from a service.</p>
 
-@if (forecasts == null)
+@if (teams == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -16,20 +17,20 @@ else
     <table class="table">
         <thead>
             <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Firstname</th>
+                <th>Numero</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
+            @foreach (var player in teams)
             {
                 <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
+                    <td>@player.Id</td>
+                    <td>@player.Name</td>
+                    <td>@player.Firstname</td>
+                    <td>@player.Number</td>
                 </tr>
             }
         </tbody>
@@ -37,10 +38,21 @@ else
 }
 
 @code {
-    private WeatherForecast[] forecasts;
+    private Player[] teams;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        teams =  await Http.GetFromJsonAsync<Player[]>("https://localhost:5001/Player");
+    }
+
+    public class Player
+    {
+        public int Id { get; set;}
+
+        public string Name { get; set; }
+
+        public string Firstname { get; set; }
+
+        public int Number { get; set; }
     }
 }
