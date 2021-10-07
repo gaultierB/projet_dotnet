@@ -115,3 +115,5 @@ C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\o
 C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\BlazorApp.genruntimeconfig.cache
 C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\BlazorApp.csproj.CopyComplete
 C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\Post.razor.g.cs
+C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\Razor\Pages\Post.razor.g.cs

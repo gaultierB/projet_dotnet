@@ -97,7 +97,7 @@ using BlazorApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\Shared\NavMenu.razor"
+#line 33 "C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

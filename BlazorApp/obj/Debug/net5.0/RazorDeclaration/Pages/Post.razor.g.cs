@@ -89,8 +89,15 @@ using BlazorApp.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/fetchdata")]
-    public partial class FetchData : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 4 "C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\Pages\Post.razor"
+using Newtonsoft.Json;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/post")]
+    public partial class Post : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -98,24 +105,49 @@ using BlazorApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 39 "C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\Pages\FetchData.razor"
+#line 43 "C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\Pages\Post.razor"
        
-    private Player[] teams;
+    Player player = new Player(2,"test","test", 12);
 
-    protected override async Task OnInitializedAsync()
+    
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 52 "C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\Pages\Post.razor"
+             
+
+    protected async Task PostPlayer()
+    
     {
-        teams = await Http.GetFromJsonAsync<Player[]>("https://localhost:5001/Player");
-    }
+        
 
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 58 "C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\Pages\Post.razor"
+                                   
+        using var response = await Http.PostAsJsonAsync("https://localhost:5001/Player/post", player);
+        Console.WriteLine(response.ToString());
+    }
     public class Player
     {
-        public int Id { get; set;}
+        public int id { get; set;}
 
-        public string Name { get; set; }
+        public string name { get; set; }
 
-        public string Firstname { get; set; }
+        public string firstname { get; set; }
 
-        public int Number { get; set; }
+        public int number { get; set; }
+        public Player(int id, string name, string firstname, int number)
+        {
+            this.id = id;
+            this.name = name;
+            this.firstname = firstname;
+            this.number = number;
+        }
     }
 
 #line default

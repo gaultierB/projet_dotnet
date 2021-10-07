@@ -1,6 +1,5 @@
 ﻿@page "/fetchdata"
 
-@using BlazorApp.Data
 @inject HttpClient Http
 
 
@@ -42,7 +41,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        teams =  await Http.GetFromJsonAsync<Player[]>("https://localhost:5001/Player");
+        teams = await Http.GetFromJsonAsync<Player[]>("https://localhost:5001/Player");
     }
 
     public class Player

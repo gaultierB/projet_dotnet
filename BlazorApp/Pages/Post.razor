@@ -1,0 +1,79 @@
+@page "/post"
+
+@inject HttpClient Http
+@using Newtonsoft.Json
+
+
+<h1>Add Players</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            @* <th>Id</th> *@
+            <th>Name</th>
+            <th>Firstname</th>
+            <th>Numero</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <label for="Name" class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="Name">
+                </div>
+            </td>
+            <td>
+                <label for="Firstname" class="col-sm-2 control-label">Firstname</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="Firstname">
+                </div>
+            </td>
+            <td>
+                <label for="Number" class="col-sm-2 control-label">Number</label>
+                <div class="col-sm-10">
+                    <input type="int" class="form-control" name="Number">
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-primary" @onclick="PostPlayer">Add Player</button>
+
+@code {
+    Player player = new Player(2,"test","test", 12);
+
+    @* var json = new
+        {
+            id = player_id_value,
+            name = player_name_value,
+            firstname = player_firstname_value,
+            numero = false
+        }; *@
+
+    protected async Task PostPlayer()
+    
+    {
+        @* string json = JsonConvert.SerializeObject(player);
+        Console.WriteLine(json); *@
+        using var response = await Http.PostAsJsonAsync("https://localhost:5001/Player/post", player);
+        Console.WriteLine(response.ToString());
+    }
+    public class Player
+    {
+        public int id { get; set;}
+
+        public string name { get; set; }
+
+        public string firstname { get; set; }
+
+        public int number { get; set; }
+        public Player(int id, string name, string firstname, int number)
+        {
+            this.id = id;
+            this.name = name;
+            this.firstname = firstname;
+            this.number = number;
+        }
+    }
+}
