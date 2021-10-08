@@ -2308,24 +2308,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gault\\.nuget\\packages\\": {}
+    "C:\\Users\\arthu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gault\\Desktop\\Efficom\\Master\\dotnet\\Projet-fullstack-dotnet\\api\\api.csproj",
+      "projectUniqueName": "C:\\Users\\arthu\\Projet-fullstack-dotnet\\api\\api.csproj",
       "projectName": "api",
-      "projectPath": "C:\\Users\\gault\\Desktop\\Efficom\\Master\\dotnet\\Projet-fullstack-dotnet\\api\\api.csproj",
-      "packagesPath": "C:\\Users\\gault\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gault\\Desktop\\Efficom\\Master\\dotnet\\Projet-fullstack-dotnet\\api\\obj\\",
+      "projectPath": "C:\\Users\\arthu\\Projet-fullstack-dotnet\\api\\api.csproj",
+      "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\arthu\\Projet-fullstack-dotnet\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\gault\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2392,13 +2394,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problème de lecture du fichier cache C:\\Users\\gault\\Desktop\\Efficom\\Master\\dotnet\\Projet-fullstack-dotnet\\api\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

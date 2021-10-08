@@ -12,39 +12,6 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 1165987877,
-        "Kind": "Components.Component",
-        "Name": "BlazorApp.Pages.GetPlayer",
-        "AssemblyName": "BlazorApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "GetPlayer"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Pages.GetPlayer"
-        }
-      },
-      {
-        "HashCode": 1932908013,
-        "Kind": "Components.Component",
-        "Name": "BlazorApp.Pages.GetPlayer",
-        "AssemblyName": "BlazorApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorApp.Pages.GetPlayer"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Pages.GetPlayer",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -251204265,
         "Kind": "Components.Component",
         "Name": "BlazorApp.Pages.Connexion",
@@ -239,6 +206,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorApp.Pages.Login",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1165987877,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Pages.GetPlayer",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "GetPlayer"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Pages.GetPlayer"
+        }
+      },
+      {
+        "HashCode": 1932908013,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Pages.GetPlayer",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorApp.Pages.GetPlayer"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Pages.GetPlayer",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
