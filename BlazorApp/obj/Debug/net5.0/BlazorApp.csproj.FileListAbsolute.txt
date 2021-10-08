@@ -122,3 +122,5 @@ C:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\RazorDeclarati
 C:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\Razor\Pages\Post.razor.g.cs
 C:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\Login.razor.g.cs
 C:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\Razor\Pages\Login.razor.g.cs
+C:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\GetPlayer.razor.g.cs
+C:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\Razor\Pages\GetPlayer.razor.g.cs

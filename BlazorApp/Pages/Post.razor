@@ -6,7 +6,7 @@
 <div class="titreEquipe">
     <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSew0ZTcxNI4DqB4a4zqIaGCH05D3BOeX3zf_6Qi9Rp8U5PGyoy_O_LY5ETjA-ruLelfTc&usqp=CAU">
-    <h1>Add Players to create your team</h1>
+    <h1 class="titleequipe">Add Players to create your team</h1>
 </div>
 
 <table class="table">
@@ -36,7 +36,7 @@
 <button class="btn btn-primary" @onclick="PostPlayer">Add Player</button>
 
 @code {
-    Player player = new Player(0, "#name", "#firstname", 11);
+    Player player = new Player(0, "@name", "@firstname", 11);
 
     public async Task PostPlayer()
 

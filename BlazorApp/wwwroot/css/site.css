@@ -13,7 +13,7 @@ a,
 .btn-primary {
   display: flex;
   justify-content: center;
-  margin-left: 40%;
+  margin-left: 50%;
   background-color: #4669ca;
   border-radius: 30px;
   border: 4px solid #4669ca;
@@ -105,10 +105,57 @@ a,
 
 .form-control {
   border: solid 2px;
-  border-color: #4669ca;
+  border-color: #505258;
   box-shadow: 5px 3px 3px #4669ca;
 }
 .logbutton {
   margin-top: 30px;
-  margin-left: 50px;
+  margin-left: 250px;
+}
+
+.accueil {
+  background-color: bisque;
+}
+
+.pageaccueil h1 {
+  color: red;
+  font-family: cursive;
+  display: flex;
+  justify-content: center;
+  margin-left: 300px;
+}
+.table {
+  margin-left: 250px;
+}
+
+.login h1 {
+  margin-left: 450px;
+}
+
+.indicaccueil a {
+  font-size: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  align-items: center;
+}
+.titleequipe {
+  margin-left: 200px;
+}
+
+.searchPlayer h1 {
+  color: red;
+  font-family: cursive;
+  margin-left: 350px;
+}
+
+.formId1 {
+  margin-left: 400px;
+  margin-top: 40px;
+  width: 400px;
+}
+.boutonsearchplayer {
+  margin-left: 500px;
+  margin-top: 40px;
+  border-radius: 50px;
+  color: red;
+  background-color: white;
 }

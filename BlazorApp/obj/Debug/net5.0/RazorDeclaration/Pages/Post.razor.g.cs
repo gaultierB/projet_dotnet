@@ -107,7 +107,7 @@ using Newtonsoft.Json;
 #nullable restore
 #line 38 "C:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\Pages\Post.razor"
        
-    Player player = new Player(0, "#name", "#firstname", 11);
+    Player player = new Player(0, "@name", "@firstname", 11);
 
     public async Task PostPlayer()
 

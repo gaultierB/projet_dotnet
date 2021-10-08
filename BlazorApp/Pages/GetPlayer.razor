@@ -1,0 +1,25 @@
+@page "/getPlayer"
+
+@inject HttpClient Http
+
+<div class="searchPlayer">
+    <h1>trouver un joueur avec son id </h1>
+</div>
+
+<div class="formId">
+    <div class="formId1 ">
+        <input type="id" class="form-control" id="floatingInput" placeholder="Id du joueur" bind="id">
+    </div>
+</div>
+<button class="boutonsearchplayer" @onclick="GetPlayerById">search player</button>
+
+
+@code {
+    public int id;
+
+    public async Task GetPlayerById()
+    {
+
+        using var response = await Http.GetAsync("https://localhost:5001/Player/" + id.ToString());
+    }
+}
