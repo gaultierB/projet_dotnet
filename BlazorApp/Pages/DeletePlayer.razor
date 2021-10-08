@@ -1,0 +1,35 @@
+@page "/deletePlayer"
+
+@inject HttpClient Http
+
+<div class="searchPlayer">
+    <h1>trouver un joueur avec son id</h1>
+</div>
+
+<div class="formId">
+    <div class="formId1 ">
+        <input type="id" class="form-control" id="floatingInput" placeholder="Id du joueur" @bind="id">
+    </div>
+</div>
+
+<button class="boutonsearchplayer" @onclick="DeletePlayerById">delete player</button>
+
+@code {
+    public int id;
+
+    protected async Task DeletePlayerById()
+    {
+        using var response = await Http.DeleteAsync("https://localhost:5001/Player/" + id);
+    }
+
+    public class Player
+    {
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+
+        public string Firstname { get; set; }
+
+        public int Number { get; set; }
+    }
+}
