@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using TodoApi.Models.Player;
-using Newtonsoft.Json;
+using TodoApi.Models;
+using EF;
+using Repository;
 
 namespace TodoApi.controllers
 {
@@ -14,45 +13,46 @@ namespace TodoApi.controllers
     public class PlayerController : ControllerBase
     {
         private readonly ILogger<PlayerController> _logger;
+        private readonly PlayerContext _context;
+        private readonly IPlayerRepository _playerRepository;
 
-        public PlayerController(ILogger<PlayerController> logger)
+        public PlayerController(ILogger<PlayerController> logger, IPlayerRepository IPlayerRepository)
         {
             _logger = logger;
+            _playerRepository = IPlayerRepository;
         }
 
         private static List<Player> teams = new List<Player>{
             new Player(1, "name1", "firstname1", 15),
         };
 
-        [HttpGet]
-        public IEnumerable<Player> Get()
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Player>> GetPlayerById(int id)
         {
-            return teams.ToArray();
+            return await _playerRepository.Get(id);
+        }
+
+        [HttpGet]
+        [Route("Get")]
+        public async Task<IEnumerable<Player>> Get()
+        {
+            return await _playerRepository.Get();
         }
 
         [HttpPost]
-        public IActionResult Post(List<Player> teams)
+        public IActionResult PostPlayer(Player player_data)
         {
-            foreach (Player player in teams)
-            {
-                try{
-                    teams.Add(player);
-                }
-                catch
-                {
-                    return NoContent();
-                }
-            }
-            return Ok();
+            _playerRepository.Create(player_data);
+            return CreatedAtAction(nameof(GetPlayerById), new { id = player_data.Id }, player_data);
         }
 
         [HttpDelete]
         [Route("{name}")]
-        public IActionResult Delete(string name)
+        public IActionResult Delete(int id)
         {
             try{
                 
-                Player character = teams.Find(x => x.Name == name);
+                Player character = teams.Find(x => x.Id == id);
                 teams.Remove(character);
             }
             catch

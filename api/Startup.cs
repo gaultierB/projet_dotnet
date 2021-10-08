@@ -11,6 +11,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using EF;
+using TodoApi.Models;
+using Pomelo.EntityFrameworkCore.MySql;
+using Microsoft.EntityFrameworkCore;
+using Repository;
 
 namespace api
 {
@@ -28,6 +33,16 @@ namespace api
         {
 
             services.AddControllers();
+            services.AddScoped<IPlayerRepository, PlayerRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            var serverVersion = new MySqlServerVersion(new Version(5, 7, 24));
+            services.AddDbContext<PlayerContext>(
+                dbContextOptions => dbContextOptions
+                    .UseMySql(Configuration.GetConnectionString("DefaultConnection"), serverVersion)
+                    .LogTo(Console.WriteLine, LogLevel.Information)
+                    .EnableSensitiveDataLogging()
+                    .EnableDetailedErrors()
+            );
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "api", Version = "v1" });
