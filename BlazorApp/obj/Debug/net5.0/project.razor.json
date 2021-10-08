@@ -12,68 +12,68 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": -710605259,
+        "HashCode": 1165987877,
         "Kind": "Components.Component",
-        "Name": "BlazorApp.Pages.Post",
+        "Name": "BlazorApp.Pages.GetPlayer",
         "AssemblyName": "BlazorApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Post"
+            "TagName": "GetPlayer"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Pages.Post"
+          "Common.TypeName": "BlazorApp.Pages.GetPlayer"
         }
       },
       {
-        "HashCode": -760474945,
+        "HashCode": 1932908013,
         "Kind": "Components.Component",
-        "Name": "BlazorApp.Pages.Post",
+        "Name": "BlazorApp.Pages.GetPlayer",
         "AssemblyName": "BlazorApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorApp.Pages.Post"
+            "TagName": "BlazorApp.Pages.GetPlayer"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Pages.Post",
+          "Common.TypeName": "BlazorApp.Pages.GetPlayer",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
-        "HashCode": -862420489,
+        "HashCode": -251204265,
         "Kind": "Components.Component",
-        "Name": "BlazorApp.Pages.connexion",
+        "Name": "BlazorApp.Pages.Connexion",
         "AssemblyName": "BlazorApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "connexion"
+            "TagName": "Connexion"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Pages.connexion"
+          "Common.TypeName": "BlazorApp.Pages.Connexion"
         }
       },
       {
-        "HashCode": -1915299040,
+        "HashCode": -503527687,
         "Kind": "Components.Component",
-        "Name": "BlazorApp.Pages.connexion",
+        "Name": "BlazorApp.Pages.Connexion",
         "AssemblyName": "BlazorApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorApp.Pages.connexion"
+            "TagName": "BlazorApp.Pages.Connexion"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Pages.connexion",
+          "Common.TypeName": "BlazorApp.Pages.Connexion",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -111,6 +111,39 @@
         }
       },
       {
+        "HashCode": -1774700531,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Pages.DeletePlayer",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DeletePlayer"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Pages.DeletePlayer"
+        }
+      },
+      {
+        "HashCode": 1437285559,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Pages.DeletePlayer",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorApp.Pages.DeletePlayer"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Pages.DeletePlayer",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -891376953,
         "Kind": "Components.Component",
         "Name": "BlazorApp.Pages.FetchData",
@@ -140,72 +173,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorApp.Pages.FetchData",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1165987877,
-        "Kind": "Components.Component",
-        "Name": "BlazorApp.Pages.GetPlayer",
-        "AssemblyName": "BlazorApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "GetPlayer"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Pages.GetPlayer"
-        }
-      },
-      {
-        "HashCode": 1932908013,
-        "Kind": "Components.Component",
-        "Name": "BlazorApp.Pages.GetPlayer",
-        "AssemblyName": "BlazorApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorApp.Pages.GetPlayer"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Pages.GetPlayer",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 904535232,
-        "Kind": "Components.Component",
-        "Name": "BlazorApp.Pages.Login",
-        "AssemblyName": "BlazorApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Login"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Pages.Login"
-        }
-      },
-      {
-        "HashCode": 2122272102,
-        "Kind": "Components.Component",
-        "Name": "BlazorApp.Pages.Login",
-        "AssemblyName": "BlazorApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorApp.Pages.Login"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Pages.Login",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -243,6 +210,72 @@
         }
       },
       {
+        "HashCode": 904535232,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Pages.Login",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Login"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Pages.Login"
+        }
+      },
+      {
+        "HashCode": 2122272102,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Pages.Login",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorApp.Pages.Login"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Pages.Login",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -710605259,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Pages.Post",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Post"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Pages.Post"
+        }
+      },
+      {
+        "HashCode": -760474945,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Pages.Post",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorApp.Pages.Post"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Pages.Post",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -224849593,
         "Kind": "Components.Component",
         "Name": "BlazorApp.App",
@@ -272,6 +305,59 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorApp.App",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 387369113,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Shared.SurveyPrompt",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Shared.SurveyPrompt"
+        }
+      },
+      {
+        "HashCode": -1643587959,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Shared.SurveyPrompt",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorApp.Shared.SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Shared.SurveyPrompt",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -368,59 +454,6 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "BlazorApp.Shared.MainLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 387369113,
-        "Kind": "Components.Component",
-        "Name": "BlazorApp.Shared.SurveyPrompt",
-        "AssemblyName": "BlazorApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Shared.SurveyPrompt"
-        }
-      },
-      {
-        "HashCode": -1643587959,
-        "Kind": "Components.Component",
-        "Name": "BlazorApp.Shared.SurveyPrompt",
-        "AssemblyName": "BlazorApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorApp.Shared.SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Shared.SurveyPrompt",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16110,13 +16143,18 @@
       "FileKind": "component"
     },
     {
+      "FilePath": "c:\\Users\\arthu\\Projet-fullstack-dotnet\\BlazorApp\\Pages\\DeletePlayer.razor",
+      "TargetPath": "Pages\\DeletePlayer.razor",
+      "FileKind": "component"
+    },
+    {
       "FilePath": "c:\\Users\\arthu\\Projet-fullstack-dotnet\\BlazorApp\\Shared\\SurveyPrompt.razor",
       "TargetPath": "Shared\\SurveyPrompt.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\arthu\\Projet-fullstack-dotnet\\BlazorApp\\Pages\\connexion.razor",
-      "TargetPath": "Pages\\connexion.razor",
+      "FilePath": "c:\\Users\\arthu\\Projet-fullstack-dotnet\\BlazorApp\\Pages\\Connexion.razor",
+      "TargetPath": "Pages\\Connexion.razor",
       "FileKind": "component"
     },
     {

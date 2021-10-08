@@ -98,16 +98,37 @@ using BlazorApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 22 "c:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\Pages\GetPlayer.razor"
+#line 42 "c:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\Pages\GetPlayer.razor"
        
-    public int id { get; set; }
-
-    public async Task GetPlayerById()
+    public int id;
+    public string name;
+    public string firstname;
+    public int number;
+    private Player player;
+    protected async Task GetPlayerById()
     {
+        player = await Http.GetFromJsonAsync<Player>("https://localhost:5001/Player/" + id.ToString());
+    }
+    public async Task UpdatePlayer()
+    {
+        Player player = new Player(id, name, firstname, number);
+        using var response = await Http.PutAsJsonAsync("https://localhost:5001/Player", player);
+    }
+    public class Player
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Firstname { get; set; }
+        public int Number { get; set; }
 
-        using var response = await Http.GetAsync("https://localhost:5001/Player/" + id.ToString());
 
-
+        public Player(int id,string name, string firstname, int number)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Firstname = firstname;
+            this.Number = number;
+        }
     }
 
 #line default

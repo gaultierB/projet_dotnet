@@ -107,21 +107,15 @@ using Newtonsoft.Json;
 #nullable restore
 #line 38 "c:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\Pages\Post.razor"
        
-    Player player = new Player(0, "@name", "@firstname", 11);
+
+    public string name;
+    public string firstname;
+    public int number;
 
     public async Task PostPlayer()
-
     {
-        
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 45 "c:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\Pages\Post.razor"
-                                       
-        using var response = await Http.PostAsJsonAsync("https://localhost:5001/Player/post", player);
-        Console.WriteLine(response.ToString());
+        Player player = new Player(name, firstname, number);
+        using var response = await Http.PostAsJsonAsync("https://localhost:5001/Player", player);
     }
     public class Player
     {
@@ -132,9 +126,8 @@ using Newtonsoft.Json;
         public string firstname { get; set; }
 
         public int number { get; set; }
-        public Player(int id, string name, string firstname, int number)
+        public Player(string name, string firstname, int number)
         {
-            this.id = id;
             this.name = name;
             this.firstname = firstname;
             this.number = number;

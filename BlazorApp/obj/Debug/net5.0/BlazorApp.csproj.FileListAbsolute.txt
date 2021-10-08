@@ -122,7 +122,17 @@ C:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\RazorDeclarati
 C:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\Razor\Pages\Post.razor.g.cs
 C:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\Login.razor.g.cs
 C:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\Razor\Pages\Login.razor.g.cs
+<<<<<<< HEAD
 C:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\GetPlayer.razor.g.cs
 C:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\Razor\Pages\GetPlayer.razor.g.cs
 C:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\Connexion.razor.g.cs
 C:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\Razor\Pages\Connexion.razor.g.cs
+=======
+C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\Login.razor.g.cs
+C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\Razor\Pages\Login.razor.g.cs
+C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\GetPlayer.razor.g.cs
+C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\Razor\Pages\GetPlayer.razor.g.cs
+C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\DeletePlayer.razor.g.cs
+C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\Razor\Pages\DeletePlayer.razor.g.cs
+>>>>>>> 476632c573bbb3189e97cda6054f50302b9fb4bb
+C:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\DeletePlayer.razor.g.cs

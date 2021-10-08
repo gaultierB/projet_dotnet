@@ -15,19 +15,19 @@
             <td>
                 <label for="name" class="col-sm-2 control-label">Name</label>
                 <div class="col-sm-10">
-                    <input id="nom" type="text" class="form-control" name="Name">
+                    <input id="name" type="text" class="form-control" name="Name" @bind="name">
                 </div>
             </td>
             <td>
                 <label for="Firstname" class="col-sm-2 control-label">Firstname</label>
                 <div class="col-sm-10">
-                    <input id="prenom" type="text" class="form-control" name="Firstname">
+                    <input id="firstname" type="text" class="form-control" name="Firstname" @bind="firstname">
                 </div>
             </td>
             <td>
                 <label for="Number" class="col-sm-2 control-label">Number</label>
                 <div class="col-sm-10">
-                    <input id="nombre" type="int" class="form-control" name="Number">
+                    <input id="number" type="int" class="form-control" name="Number" @bind="number">
                 </div>
             </td>
         </tr>
@@ -36,15 +36,15 @@
 <button class="btn btn-primary" @onclick="PostPlayer">Add Player</button>
 
 @code {
-    Player player = new Player(0, "@name", "@firstname", 11);
+
+    public string name;
+    public string firstname;
+    public int number;
 
     public async Task PostPlayer()
-
     {
-        @* string json = JsonConvert.SerializeObject(player);
-            Console.WriteLine(json); *@
-        using var response = await Http.PostAsJsonAsync("https://localhost:5001/Player/post", player);
-        Console.WriteLine(response.ToString());
+        Player player = new Player(name, firstname, number);
+        using var response = await Http.PostAsJsonAsync("https://localhost:5001/Player", player);
     }
     public class Player
     {
@@ -55,9 +55,8 @@
         public string firstname { get; set; }
 
         public int number { get; set; }
-        public Player(int id, string name, string firstname, int number)
+        public Player(string name, string firstname, int number)
         {
-            this.id = id;
             this.name = name;
             this.firstname = firstname;
             this.number = number;

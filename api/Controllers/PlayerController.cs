@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using TodoApi.Models.Player;
+using TodoApi.Models;
 using Newtonsoft.Json;
+using EF;
+using Repository;
 
 namespace TodoApi.controllers
 {
@@ -14,15 +15,24 @@ namespace TodoApi.controllers
     public class PlayerController : ControllerBase
     {
         private readonly ILogger<PlayerController> _logger;
+        private readonly PlayerContext _context;
+        private readonly IPlayerRepository _playerRepository;
 
-        public PlayerController(ILogger<PlayerController> logger)
+        public PlayerController(ILogger<PlayerController> logger, IPlayerRepository IPlayerRepository)
         {
             _logger = logger;
+            _playerRepository = IPlayerRepository;
         }
 
         private static List<Player> teams = new List<Player>{
             new Player(1, "name1", "firstname1", 15),
         };
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Player>> GetPlayerById(int id)
+        {
+            return await _playerRepository.Get(id);
+        }
 
         [HttpGet]
         public IEnumerable<Player> Get()
@@ -30,35 +40,35 @@ namespace TodoApi.controllers
             return teams.ToArray();
         }
 
-        [HttpPost]
-        public IActionResult Post(List<Player> teams)
+        [HttpGet]
+        [Route("GetBdd")]
+        public async Task<IEnumerable<Player>> Getbdd()
         {
-            foreach (Player player in teams)
-            {
-                try{
-                    teams.Add(player);
-                }
-                catch
-                {
-                    return NoContent();
-                }
-            }
+            return await _playerRepository.Get();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PostPlayer(Player player_data)
+        {
+            var new_player = await _playerRepository.Create(player_data);
+            return CreatedAtAction(nameof(GetPlayerById), new { id = new_player.Id }, new_player);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdatePlayer(Player player_data)
+        {
+            await _playerRepository.Update(player_data);
             return Ok();
         }
 
-        [HttpDelete]
-        [Route("{name}")]
-        public IActionResult Delete(string name)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
         {
-            try{
-                
-                Player character = teams.Find(x => x.Name == name);
-                teams.Remove(character);
-            }
-            catch
+            if(!_playerRepository.isIdExist(id))
             {
-                return NoContent();
+                return NotFound();
             }
+            await _playerRepository.Delete(id);
             return Ok();
         }
     }

@@ -1,27 +1,64 @@
 @page "/login"
-
+@inject HttpClient Http
 
 <div class="login">
     <h1>Create an account</h1>
 </div>
 
 <div class="formulaire">
-    <div class="form-floating ">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+    <div class="form-floating">
+        <input type="login" class="form-control" id="floatingPassword" placeholder="login" @bind="login">
     </div>
     <div class="form-floating">
-        <input type="login" class="form-control" id="floatingPassword" placeholder="login">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="password" @bind="password">
     </div>
     <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="password">
-    </div>
-    <div class="form-floating">
-        <input type="confirm password" class="form-control" id="floatingPassword" placeholder="confirm password">
-    </div>
-    <div class="form-floating">
-        <input type="country" class="form-control" id="floatingPassword" placeholder="ville">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="confirm password" @bind="confirm_password">
     </div>
     <div class="logbutton">
-        <button class="btn btn-primary">login</button>
+        <button class="btn btn-primary" @onclick="PostUser">Inscription</button>
     </div>
+    @if (bool_create_user == true)
+        {
+            <p>User cree</p>
+        }
+        else if (bool_create_user == false)
+        {
+            <p>les mots de passes saisies sont différents</p>
+        }
 </div>
+
+@code {
+    public string login;
+    public string password;
+    public string confirm_password;
+    public bool bool_create_user = false;
+
+    public async Task PostUser()
+    {
+        User user = new User(login, password);
+        if(password == confirm_password)
+        {
+            bool_create_user = true;
+            using var response = await Http.PostAsJsonAsync("https://localhost:5001/User", user);
+        }
+        else
+        {
+            bool_create_user = false;
+        }
+    }
+    public class User
+    {
+        public int Id { get; set; }
+
+        public string Login { get; set; }
+
+        public string Password { get; set; }
+
+        public User(string login, string password)
+        {
+            this.Login = login;
+            this.Password = password;
+        }
+    }
+}

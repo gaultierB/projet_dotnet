@@ -101,10 +101,9 @@ using BlazorApp.Shared;
 #line 41 "c:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\Pages\FetchData.razor"
        
     private Player[] teams;
-
     protected override async Task OnInitializedAsync()
     {
-        teams = await Http.GetFromJsonAsync<Player[]>("https://localhost:5001/Player");
+        teams = await Http.GetFromJsonAsync<Player[]>("https://localhost:5001/Player/GetBdd");
     }
 
     public class Player

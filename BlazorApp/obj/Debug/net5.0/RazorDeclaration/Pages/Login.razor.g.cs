@@ -97,6 +97,46 @@ using BlazorApp.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 31 "c:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\Pages\Login.razor"
+       
+    public string login;
+    public string password;
+    public string confirm_password;
+    public bool bool_create_user = false;
+
+    public async Task PostUser()
+    {
+        User user = new User(login, password);
+        if(password == confirm_password)
+        {
+            bool_create_user = true;
+            using var response = await Http.PostAsJsonAsync("https://localhost:5001/User", user);
+        }
+        else
+        {
+            bool_create_user = false;
+        }
+    }
+    public class User
+    {
+        public int Id { get; set; }
+
+        public string Login { get; set; }
+
+        public string Password { get; set; }
+
+        public User(string login, string password)
+        {
+            this.Login = login;
+            this.Password = password;
+        }
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }
 #pragma warning restore 1591

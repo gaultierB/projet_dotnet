@@ -1,32 +1,73 @@
 @page "/getPlayer"
-
 @inject HttpClient Http
-<div id="findPlayer"></div>
 <div class="searchPlayer">
-    <h1>trouver un joueur avec son id </h1>
+    <h1>trouver un joueur avec son id</h1>
 </div>
-
 <div class="formId">
     <div class="formId1 ">
-        <input type="id" class="form-control" id="floatingInput" placeholder="Id du joueur" bind="id">
+        <input type="id" class="form-control" id="floatingInput" placeholder="Id du joueur" @bind="id">
     </div>
 </div>
-<div class="boutonsearch">
-    <button class="btn-primary" @onclick="GetPlayerById">search player</button>
-</div>
-
-
-
-
-
+<button class="boutonsearchplayer" @onclick="GetPlayerById">search player</button>
+@if (player == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Firstname</th>
+                <th>Numero</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@player.Id</td>
+                <td>@player.Name</td>
+                <td>@player.Firstname</td>
+                <td>@player.Number</td>
+            </tr>
+        </tbody>
+    </table>
+    <h1>saisissez les valeurs à modifiez</h1>
+    <input id="name" type="text" class="form-control" name="Name" @bind="name">
+    <input id="name" type="text" class="form-control" name="Name" @bind="firstname">
+    <input id="name" type="number" class="form-control" name="Name" @bind="number">
+    <button class="boutonupdateplayer" @onclick="UpdatePlayer">UpdatePlayer</button>
+}
 @code {
-    public int id { get; set; }
-
-    public async Task GetPlayerById()
+    public int id;
+    public string name;
+    public string firstname;
+    public int number;
+    private Player player;
+    protected async Task GetPlayerById()
     {
+        player = await Http.GetFromJsonAsync<Player>("https://localhost:5001/Player/" + id.ToString());
+    }
+    public async Task UpdatePlayer()
+    {
+        Player player = new Player(id, name, firstname, number);
+        using var response = await Http.PutAsJsonAsync("https://localhost:5001/Player", player);
+    }
+    public class Player
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Firstname { get; set; }
+        public int Number { get; set; }
 
-        using var response = await Http.GetAsync("https://localhost:5001/Player/" + id.ToString());
 
-
+        public Player(int id, string name, string firstname, int number)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Firstname = firstname;
+            this.Number = number;
+        }
     }
 }
