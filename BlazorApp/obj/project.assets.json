@@ -48,24 +48,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gault\\.nuget\\packages\\": {}
+    "C:\\Users\\arthu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gault\\Desktop\\Efficom\\Master\\dotnet\\Projet-fullstack-dotnet\\BlazorApp\\BlazorApp.csproj",
+      "projectUniqueName": "C:\\Users\\arthu\\Projet-fullstack-dotnet\\BlazorApp\\BlazorApp.csproj",
       "projectName": "BlazorApp",
-      "projectPath": "C:\\Users\\gault\\Desktop\\Efficom\\Master\\dotnet\\Projet-fullstack-dotnet\\BlazorApp\\BlazorApp.csproj",
-      "packagesPath": "C:\\Users\\gault\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gault\\Desktop\\Efficom\\Master\\dotnet\\Projet-fullstack-dotnet\\BlazorApp\\obj\\",
+      "projectPath": "C:\\Users\\arthu\\Projet-fullstack-dotnet\\BlazorApp\\BlazorApp.csproj",
+      "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\arthu\\Projet-fullstack-dotnet\\BlazorApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\gault\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

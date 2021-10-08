@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = api
-build_property.ProjectDir = C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\api\
+build_property.ProjectDir = C:\Users\arthu\Projet-fullstack-dotnet\api\
