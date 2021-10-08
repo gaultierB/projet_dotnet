@@ -41,22 +41,10 @@
 <button class="btn btn-primary" @onclick="PostPlayer">Add Player</button>
 
 @code {
-    Player player = new Player(2,"test","test", 12);
-
-    @* var json = new
-        {
-            id = player_id_value,
-            name = player_name_value,
-            firstname = player_firstname_value,
-            numero = false
-        }; *@
-
+    Player player = new Player("hola","hola", 9);
     protected async Task PostPlayer()
-    
     {
-        @* string json = JsonConvert.SerializeObject(player);
-        Console.WriteLine(json); *@
-        using var response = await Http.PostAsJsonAsync("https://localhost:5001/Player/post", player);
+        using var response = await Http.PostAsJsonAsync("https://localhost:5001/Player/Getbdd", player);
         Console.WriteLine(response.ToString());
     }
     public class Player
@@ -68,9 +56,8 @@
         public string firstname { get; set; }
 
         public int number { get; set; }
-        public Player(int id, string name, string firstname, int number)
+        public Player(string name, string firstname, int number)
         {
-            this.id = id;
             this.name = name;
             this.firstname = firstname;
             this.number = number;
