@@ -10,8 +10,9 @@ namespace TodoApi.Models
 
         public string Password { get; set; }
 
-        public User(string login, string password)
+        public User(int id,string login, string password)
         {
+            this.Id = id;
             this.Login = login;
             this.Password = password;
         }

@@ -3,36 +3,31 @@
 @inject HttpClient Http
 @using Newtonsoft.Json
 
-
-<h1>Add Players</h1>
+<div class="titreEquipe">
+    <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSew0ZTcxNI4DqB4a4zqIaGCH05D3BOeX3zf_6Qi9Rp8U5PGyoy_O_LY5ETjA-ruLelfTc&usqp=CAU">
+    <h1>Add Players to create your team</h1>
+</div>
 
 <table class="table">
-    <thead>
-        <tr>
-            @* <th>Id</th> *@
-            <th>Name</th>
-            <th>Firstname</th>
-            <th>Numero</th>
-        </tr>
-    </thead>
     <tbody>
         <tr>
             <td>
-                <label for="Name" class="col-sm-2 control-label">Name</label>
+                <label for="name" class="col-sm-2 control-label">Name</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="Name">
+                    <input id="name" type="text" class="form-control" name="Name" @bind="name">
                 </div>
             </td>
             <td>
                 <label for="Firstname" class="col-sm-2 control-label">Firstname</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="Firstname">
+                    <input id="firstname" type="text" class="form-control" name="Firstname" @bind="firstname">
                 </div>
             </td>
             <td>
                 <label for="Number" class="col-sm-2 control-label">Number</label>
                 <div class="col-sm-10">
-                    <input type="int" class="form-control" name="Number">
+                    <input id="number" type="int" class="form-control" name="Number" @bind="number" >
                 </div>
             </td>
         </tr>
@@ -41,15 +36,19 @@
 <button class="btn btn-primary" @onclick="PostPlayer">Add Player</button>
 
 @code {
-    Player player = new Player("hola","hola", 9);
-    protected async Task PostPlayer()
+
+    public string name;
+    public string firstname;
+    public int number;
+
+    public async Task PostPlayer()
     {
-        using var response = await Http.PostAsJsonAsync("https://localhost:5001/Player/Getbdd", player);
-        Console.WriteLine(response.ToString());
+        Player player = new Player(name, firstname, number);
+        using var response = await Http.PostAsJsonAsync("https://localhost:5001/Player", player);
     }
     public class Player
     {
-        public int id { get; set;}
+        public int id { get; set; }
 
         public string name { get; set; }
 

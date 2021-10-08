@@ -28,6 +28,7 @@ namespace Repository
             catch(Exception exception){
                 throw exception;
             }
+            
             return player;
         }
 

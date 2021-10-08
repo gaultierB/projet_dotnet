@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -36,25 +37,11 @@ namespace TodoApi.controllers
         }
 
         [HttpPost]
-        public IActionResult PostUser(User user_data)
+        public async Task<ActionResult<User>> PostUser([FromBody] User user_data)
         {
-            _userRepository.Create(user_data);
-            return CreatedAtAction(nameof(GetUserById), new { id = user_data.Id }, user_data);
+            Console.WriteLine(user_data.Login);
+            var new_user = await _userRepository.Create(user_data);
+            return CreatedAtAction(nameof(GetUserById), new { id = new_user.Id }, new_user);
         }
-
-        // [HttpDelete]
-        // [Route("{name}")]
-        // public IActionResult Delete(int id)
-        // {
-        //     try{
-        //         User user = Users.Find(x => x.Id == id);
-        //         Users.Remove(user);
-        //     }
-        //     catch
-        //     {
-        //         return NoContent();
-        //     }
-        //     return Ok();
-        // }
     }
 }

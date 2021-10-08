@@ -28,6 +28,7 @@ C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\api\obj\Deb
 C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\api\obj\Debug\net5.0\api.pdb
 C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\api\obj\Debug\net5.0\api.genruntimeconfig.cache
 C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\api\bin\Debug\net5.0\Newtonsoft.Json.dll
+<<<<<<< HEAD
 C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\api\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
@@ -59,3 +60,35 @@ C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\api\bin\Deb
 C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\api\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\api\bin\Debug\net5.0\MySqlConnector.dll
 C:\Users\gault\Desktop\Efficom\Master\dotnet\Projet-fullstack-dotnet\api\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+=======
+C:\Users\arthu\Projet-fullstack-dotnet\api\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\arthu\Projet-fullstack-dotnet\api\bin\Debug\net5.0\appsettings.json
+C:\Users\arthu\Projet-fullstack-dotnet\api\bin\Debug\net5.0\api.exe
+C:\Users\arthu\Projet-fullstack-dotnet\api\bin\Debug\net5.0\api.deps.json
+C:\Users\arthu\Projet-fullstack-dotnet\api\bin\Debug\net5.0\api.runtimeconfig.json
+C:\Users\arthu\Projet-fullstack-dotnet\api\bin\Debug\net5.0\api.runtimeconfig.dev.json
+C:\Users\arthu\Projet-fullstack-dotnet\api\bin\Debug\net5.0\api.dll
+C:\Users\arthu\Projet-fullstack-dotnet\api\bin\Debug\net5.0\ref\api.dll
+C:\Users\arthu\Projet-fullstack-dotnet\api\bin\Debug\net5.0\api.pdb
+C:\Users\arthu\Projet-fullstack-dotnet\api\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\arthu\Projet-fullstack-dotnet\api\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\arthu\Projet-fullstack-dotnet\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\arthu\Projet-fullstack-dotnet\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\arthu\Projet-fullstack-dotnet\api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\arthu\Projet-fullstack-dotnet\api\obj\Debug\net5.0\api.csproj.AssemblyReference.cache
+C:\Users\arthu\Projet-fullstack-dotnet\api\obj\Debug\net5.0\api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arthu\Projet-fullstack-dotnet\api\obj\Debug\net5.0\api.AssemblyInfoInputs.cache
+C:\Users\arthu\Projet-fullstack-dotnet\api\obj\Debug\net5.0\api.AssemblyInfo.cs
+C:\Users\arthu\Projet-fullstack-dotnet\api\obj\Debug\net5.0\api.csproj.CoreCompileInputs.cache
+C:\Users\arthu\Projet-fullstack-dotnet\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\arthu\Projet-fullstack-dotnet\api\obj\Debug\net5.0\api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\arthu\Projet-fullstack-dotnet\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.Manifest.cache
+C:\Users\arthu\Projet-fullstack-dotnet\api\obj\Debug\net5.0\staticwebassets\api.StaticWebAssets.xml
+C:\Users\arthu\Projet-fullstack-dotnet\api\obj\Debug\net5.0\scopedcss\bundle\api.styles.css
+C:\Users\arthu\Projet-fullstack-dotnet\api\obj\Debug\net5.0\api.RazorTargetAssemblyInfo.cache
+C:\Users\arthu\Projet-fullstack-dotnet\api\obj\Debug\net5.0\api.csproj.CopyComplete
+C:\Users\arthu\Projet-fullstack-dotnet\api\obj\Debug\net5.0\api.dll
+C:\Users\arthu\Projet-fullstack-dotnet\api\obj\Debug\net5.0\ref\api.dll
+C:\Users\arthu\Projet-fullstack-dotnet\api\obj\Debug\net5.0\api.pdb
+C:\Users\arthu\Projet-fullstack-dotnet\api\obj\Debug\net5.0\api.genruntimeconfig.cache
+>>>>>>> ba137f1247377c08029f9ffdb93801a73f62e6cc

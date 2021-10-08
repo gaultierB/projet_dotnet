@@ -1,5 +1,5 @@
 ﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">BlazorApp</a>
+    <a class="navbar-brand" href="">XV de France</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,7 +24,22 @@
         </li>
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="post">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Add Player
+                <span class="oi oi-star" aria-hidden="true"></span> Add Player
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="login">
+                <span class="oi oi-command" aria-hidden="true"></span> Manage Team
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="getPlayer">
+                <span class="oi oi-command" aria-hidden="true"></span> Get Player
+            </NavLink>
+        </li>
+                <li class="nav-item px-3">
+            <NavLink class="nav-link" href="deletePlayer">
+                <span class="oi oi-command" aria-hidden="true"></span> Delete Player
             </NavLink>
         </li>
     </ul>

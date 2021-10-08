@@ -40,7 +40,7 @@ else
     private Player[] teams;
     protected override async Task OnInitializedAsync()
     {
-        teams = await Http.GetFromJsonAsync<Player[]>("https://localhost:5001/Player/Get");
+        teams = await Http.GetFromJsonAsync<Player[]>("https://localhost:5001/Player/GetBdd");
     }
 
     public class Player

@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TodoApi.Models;
+using Newtonsoft.Json;
 using EF;
 using Repository;
 
@@ -33,32 +35,40 @@ namespace TodoApi.controllers
         }
 
         [HttpGet]
-        [Route("Get")]
-        public async Task<IEnumerable<Player>> Get()
+        public IEnumerable<Player> Get()
+        {
+            return teams.ToArray();
+        }
+
+        [HttpGet]
+        [Route("GetBdd")]
+        public async Task<IEnumerable<Player>> Getbdd()
         {
             return await _playerRepository.Get();
         }
 
         [HttpPost]
-        public IActionResult PostPlayer(Player player_data)
+        public async Task<IActionResult> PostPlayer(Player player_data)
         {
-            _playerRepository.Create(player_data);
-            return CreatedAtAction(nameof(GetPlayerById), new { id = player_data.Id }, player_data);
+            var new_player = await _playerRepository.Create(player_data);
+            return CreatedAtAction(nameof(GetPlayerById), new { id = new_player.Id }, new_player);
         }
 
-        [HttpDelete]
-        [Route("{name}")]
-        public IActionResult Delete(int id)
+        [HttpPut]
+        public async Task<IActionResult> UpdatePlayer(Player player_data)
         {
-            try{
-                
-                Player character = teams.Find(x => x.Id == id);
-                teams.Remove(character);
-            }
-            catch
+            await _playerRepository.Update(player_data);
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            if(!_playerRepository.isIdExist(id))
             {
-                return NoContent();
+                return NotFound();
             }
+            await _playerRepository.Delete(id);
             return Ok();
         }
     }
