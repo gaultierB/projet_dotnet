@@ -122,10 +122,10 @@ a,
   font-family: cursive;
   display: flex;
   justify-content: center;
-  margin-left: 300px;
+  margin-left: 320px;
 }
 .table {
-  margin-left: 250px;
+  margin-left: 200px;
 }
 
 .login h1 {
@@ -136,6 +136,7 @@ a,
   font-size: 30px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   align-items: center;
+  margin-left: 380px;
 }
 .titleequipe {
   margin-left: 200px;
@@ -158,4 +159,59 @@ a,
   border-radius: 50px;
   color: red;
   background-color: white;
+}
+.container2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.container2 img {
+  width: 250px;
+  height: 250px;
+}
+.overflowimg {
+  width: 250px;
+  height: 250px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  transition: 1s ease;
+  padding-top: 80px;
+}
+.photo:hover .overflowimg {
+  transform: translateY(-250px);
+}
+.photo {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+.photorugby {
+  margin-top: 40px;
+  margin-left: 240px;
+}
+
+.boutonsearchplayer {
+  height: 60;
+  color: #4669ca;
+}
+.boutonsearch {
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-top: 255px;
+  background-image: linear-gradient(30deg, #4669ca, red);
+  height: 150px;
+}
+footer .navigation {
+  color: white;
+}
+footer a {
+  margin-left: 40px;
+  margin-top: 50px;
 }

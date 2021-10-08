@@ -89,31 +89,13 @@ using BlazorApp.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/getPlayer")]
-    public partial class GetPlayer : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Connexion : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 22 "c:\Users\arthu\Projet-fullstack-dotnet\BlazorApp\Pages\GetPlayer.razor"
-       
-    public int id { get; set; }
-
-    public async Task GetPlayerById()
-    {
-
-        using var response = await Http.GetAsync("https://localhost:5001/Player/" + id.ToString());
-
-
-    }
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }
 #pragma warning restore 1591
